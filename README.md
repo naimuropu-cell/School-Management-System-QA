@@ -19,6 +19,7 @@ This project demonstrates end-to-end QA activities performed on a School Managem
 - API Testing
 - Database Validation
 - Selenium Automation
+- Postman Automation
 - Business Rule Documentation
 - User Guide Preparation
 
