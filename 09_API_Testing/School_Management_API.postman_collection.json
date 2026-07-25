@@ -1,0 +1,1379 @@
+{
+    "info": {
+      "_postman_id": "7d4d91f8-portfolio-school-management",
+      "name": "School Management System API",
+      "description": "QA Portfolio - School Management System API Testing Collection",
+      "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+  
+    "variable": [
+      {
+        "key": "base_url",
+        "value": "https://edu.yesbangladesh.net"
+      },
+      {
+        "key": "token",
+        "value": ""
+      }
+    ],
+  
+    "item": [
+  
+      {
+        "name": "Authentication",
+  
+        "item": [
+  
+          {
+            "name": "Login",
+  
+            "event": [
+              {
+                "listen": "test",
+                "script": {
+                  "exec": [
+                    "pm.test('Status code is 200', function () {",
+                    "    pm.response.to.have.status(200);",
+                    "});",
+                    "",
+                    "var jsonData = pm.response.json();",
+                    "pm.collectionVariables.set('token', jsonData.token);"
+                  ]
+                }
+              }
+            ],
+  
+            "request": {
+              "method": "POST",
+  
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+  
+              "body": {
+                "mode": "raw",
+                "raw": "{\n    \"email\":\"admin@example.com\",\n    \"password\":\"123456\"\n}"
+              },
+  
+              "url": {
+                "raw": "{{base_url}}/login",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "login"
+                ]
+              }
+            }
+          },
+  
+          {
+            "name": "Logout",
+  
+            "request": {
+  
+              "method": "POST",
+  
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                }
+              ],
+  
+              "url": {
+                "raw": "{{base_url}}/logout",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "logout"
+                ]
+              }
+  
+            }
+  
+          },
+  
+          {
+            "name": "Get Profile",
+  
+            "request": {
+  
+              "method": "GET",
+  
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                }
+              ],
+  
+              "url": {
+                "raw": "{{base_url}}/profile",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "profile"
+                ]
+              }
+  
+            }
+  
+          }
+  
+        ]
+  
+      },
+  
+      {
+        "name": "Student",
+  
+        "item": [
+  
+          {
+            "name": "Get Student List",
+  
+            "request": {
+  
+              "method": "GET",
+  
+              "header": [
+  
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                }
+  
+              ],
+  
+              "url": {
+  
+                "raw": "{{base_url}}/students",
+  
+                "host": [
+  
+                  "{{base_url}}"
+  
+                ],
+  
+                "path": [
+  
+                  "students"
+  
+                ]
+  
+              }
+  
+            }
+  
+          },
+  
+          {
+  
+            "name": "Get Student By ID",
+  
+            "request": {
+  
+              "method": "GET",
+  
+              "header": [
+  
+                {
+  
+                  "key": "Authorization",
+  
+                  "value": "Bearer {{token}}"
+  
+                }
+  
+              ],
+  
+              "url": {
+  
+                "raw": "{{base_url}}/students/1",
+  
+                "host": [
+  
+                  "{{base_url}}"
+  
+                ],
+  
+                "path": [
+  
+                  "students",
+  
+                  "1"
+  
+                ]
+  
+              }
+  
+            }
+  
+          },
+  
+          {
+  
+            "name": "Create Student",
+  
+            "request": {
+  
+              "method": "POST",
+  
+              "header": [
+  
+                {
+  
+                  "key": "Authorization",
+  
+                  "value": "Bearer {{token}}"
+  
+                },
+  
+                {
+  
+                  "key": "Content-Type",
+  
+                  "value": "application/json"
+  
+                }
+  
+              ],
+  
+              "body": {
+  
+                "mode": "raw",
+  
+                "raw": "{\n\"first_name\":\"John\",\n\"last_name\":\"Doe\",\n\"class\":\"10\",\n\"section\":\"A\"\n}"
+  
+              },
+  
+              "url": {
+  
+                "raw": "{{base_url}}/students",
+  
+                "host": [
+  
+                  "{{base_url}}"
+  
+                ],
+  
+                "path": [
+  
+                  "students"
+  
+                ]
+  
+              }
+  
+            }
+  
+          },
+          {
+            "name": "Update Student",
+  
+            "request": {
+  
+              "method": "PUT",
+  
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+  
+              "body": {
+                "mode": "raw",
+                "raw": "{\n\"first_name\":\"John Updated\",\n\"class\":\"10\",\n\"section\":\"B\"\n}"
+              },
+  
+              "url": {
+                "raw": "{{base_url}}/students/1",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "students",
+                  "1"
+                ]
+              }
+  
+            }
+  
+          },
+  
+          {
+  
+            "name": "Delete Student",
+  
+            "request": {
+  
+              "method": "DELETE",
+  
+              "header": [
+  
+                {
+  
+                  "key": "Authorization",
+  
+                  "value": "Bearer {{token}}"
+  
+                }
+  
+              ],
+  
+              "url": {
+  
+                "raw": "{{base_url}}/students/1",
+  
+                "host": [
+  
+                  "{{base_url}}"
+  
+                ],
+  
+                "path": [
+  
+                  "students",
+  
+                  "1"
+  
+                ]
+  
+              }
+  
+            }
+  
+          }
+  
+        ]
+  
+      },
+  
+      {
+  
+        "name": "Admission",
+  
+        "item": [
+  
+          {
+  
+            "name": "Admission List",
+  
+            "request": {
+  
+              "method": "GET",
+  
+              "header": [
+  
+                {
+  
+                  "key": "Authorization",
+  
+                  "value": "Bearer {{token}}"
+  
+                }
+  
+              ],
+  
+              "url": {
+  
+                "raw": "{{base_url}}/admissions",
+  
+                "host": [
+  
+                  "{{base_url}}"
+  
+                ],
+  
+                "path": [
+  
+                  "admissions"
+  
+                ]
+  
+              }
+  
+            }
+  
+          },
+  
+          {
+  
+            "name": "Create Admission",
+  
+            "request": {
+  
+              "method": "POST",
+  
+              "header": [
+  
+                {
+  
+                  "key": "Authorization",
+  
+                  "value": "Bearer {{token}}"
+  
+                },
+  
+                {
+  
+                  "key": "Content-Type",
+  
+                  "value": "application/json"
+  
+                }
+  
+              ],
+  
+              "body": {
+  
+                "mode": "raw",
+  
+                "raw": "{\n\"student_name\":\"John Doe\",\n\"class\":\"10\",\n\"section\":\"A\",\n\"guardian\":\"Mr Doe\"\n}"
+  
+              },
+  
+              "url": {
+  
+                "raw": "{{base_url}}/admissions",
+  
+                "host": [
+  
+                  "{{base_url}}"
+  
+                ],
+  
+                "path": [
+  
+                  "admissions"
+  
+                ]
+  
+              }
+  
+            }
+  
+          }
+  
+        ]
+  
+      },
+  
+      {
+  
+        "name": "Teacher",
+  
+        "item": [
+  
+          {
+  
+            "name": "Teacher List",
+  
+            "request": {
+  
+              "method": "GET",
+  
+              "header": [
+  
+                {
+  
+                  "key": "Authorization",
+  
+                  "value": "Bearer {{token}}"
+  
+                }
+  
+              ],
+  
+              "url": {
+  
+                "raw": "{{base_url}}/teachers",
+  
+                "host": [
+  
+                  "{{base_url}}"
+  
+                ],
+  
+                "path": [
+  
+                  "teachers"
+  
+                ]
+  
+              }
+  
+            }
+  
+          },
+  
+          {
+  
+            "name": "Create Teacher",
+  
+            "request": {
+  
+              "method": "POST",
+  
+              "header": [
+  
+                {
+  
+                  "key": "Authorization",
+  
+                  "value": "Bearer {{token}}"
+  
+                },
+  
+                {
+  
+                  "key": "Content-Type",
+  
+                  "value": "application/json"
+  
+                }
+  
+              ],
+  
+              "body": {
+  
+                "mode": "raw",
+  
+                "raw": "{\n\"name\":\"Mr Rahman\",\n\"email\":\"teacher@example.com\",\n\"department\":\"Science\"\n}"
+  
+              },
+  
+              "url": {
+  
+                "raw": "{{base_url}}/teachers",
+  
+                "host": [
+  
+                  "{{base_url}}"
+  
+                ],
+  
+                "path": [
+  
+                  "teachers"
+  
+                ]
+  
+              }
+  
+            }
+  
+          }
+  
+        ]
+  
+      },
+  
+      {
+  
+        "name": "Attendance",
+  
+        "item": [
+  
+          {
+  
+            "name": "Attendance List",
+  
+            "request": {
+  
+              "method": "GET",
+  
+              "header": [
+  
+                {
+  
+                  "key": "Authorization",
+  
+                  "value": "Bearer {{token}}"
+  
+                }
+  
+              ],
+  
+              "url": {
+  
+                "raw": "{{base_url}}/attendance",
+  
+                "host": [
+  
+                  "{{base_url}}"
+  
+                ],
+  
+                "path": [
+  
+                  "attendance"
+  
+                ]
+  
+              }
+  
+            }
+  
+          },
+          {
+            "name": "Mark Attendance",
+  
+            "request": {
+  
+              "method": "POST",
+  
+              "header": [
+  
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                },
+  
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+  
+              ],
+  
+              "body": {
+  
+                "mode": "raw",
+  
+                "raw": "{\n\"student_id\":1,\n\"date\":\"2026-07-25\",\n\"status\":\"Present\"\n}"
+  
+              },
+  
+              "url": {
+  
+                "raw": "{{base_url}}/attendance",
+  
+                "host": [
+                  "{{base_url}}"
+                ],
+  
+                "path": [
+                  "attendance"
+                ]
+  
+              }
+  
+            }
+  
+          }
+  
+        ]
+  
+      },
+  
+      {
+  
+        "name": "Homework",
+  
+        "item": [
+  
+          {
+  
+            "name": "Homework List",
+  
+            "request": {
+  
+              "method": "GET",
+  
+              "header": [
+  
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                }
+  
+              ],
+  
+              "url": {
+  
+                "raw": "{{base_url}}/homework",
+  
+                "host": [
+                  "{{base_url}}"
+                ],
+  
+                "path": [
+                  "homework"
+                ]
+  
+              }
+  
+            }
+  
+          },
+  
+          {
+  
+            "name": "Create Homework",
+  
+            "request": {
+  
+              "method": "POST",
+  
+              "header": [
+  
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                },
+  
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+  
+              ],
+  
+              "body": {
+  
+                "mode": "raw",
+  
+                "raw": "{\n\"title\":\"Math Homework\",\n\"class\":\"10\",\n\"section\":\"A\",\n\"due_date\":\"2026-07-30\"\n}"
+  
+              },
+  
+              "url": {
+  
+                "raw": "{{base_url}}/homework",
+  
+                "host": [
+                  "{{base_url}}"
+                ],
+  
+                "path": [
+                  "homework"
+                ]
+  
+              }
+  
+            }
+  
+          },
+  
+          {
+  
+            "name": "Homework Evaluation",
+  
+            "request": {
+  
+              "method": "POST",
+  
+              "header": [
+  
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                }
+  
+              ],
+  
+              "url": {
+  
+                "raw": "{{base_url}}/homework/evaluation",
+  
+                "host": [
+                  "{{base_url}}"
+                ],
+  
+                "path": [
+                  "homework",
+                  "evaluation"
+                ]
+  
+              }
+  
+            }
+  
+          }
+  
+        ]
+  
+      },
+  
+      {
+  
+        "name": "Examination",
+  
+        "item": [
+  
+          {
+  
+            "name": "Exam List",
+  
+            "request": {
+  
+              "method": "GET",
+  
+              "header": [
+  
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                }
+  
+              ],
+  
+              "url": {
+  
+                "raw": "{{base_url}}/examinations",
+  
+                "host": [
+                  "{{base_url}}"
+                ],
+  
+                "path": [
+                  "examinations"
+                ]
+  
+              }
+  
+            }
+  
+          },
+  
+          {
+  
+            "name": "Publish Result",
+  
+            "request": {
+  
+              "method": "POST",
+  
+              "header": [
+  
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                }
+  
+              ],
+  
+              "url": {
+  
+                "raw": "{{base_url}}/results/publish",
+  
+                "host": [
+                  "{{base_url}}"
+                ],
+  
+                "path": [
+                  "results",
+                  "publish"
+                ]
+  
+              }
+  
+            }
+  
+          }
+  
+        ]
+  
+      },
+  
+      {
+  
+        "name": "Finance",
+  
+        "item": [
+  
+          {
+  
+            "name": "Fee Structure",
+  
+            "request": {
+  
+              "method": "GET",
+  
+              "header": [
+  
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                }
+  
+              ],
+  
+              "url": {
+  
+                "raw": "{{base_url}}/fees",
+  
+                "host": [
+                  "{{base_url}}"
+                ],
+  
+                "path": [
+                  "fees"
+                ]
+  
+              }
+  
+            }
+  
+          },
+  
+          {
+  
+            "name": "Generate Invoice",
+  
+            "request": {
+  
+              "method": "POST",
+  
+              "header": [
+  
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                }
+  
+              ],
+  
+              "url": {
+  
+                "raw": "{{base_url}}/fees/invoice",
+  
+                "host": [
+                  "{{base_url}}"
+                ],
+  
+                "path": [
+                  "fees",
+                  "invoice"
+                ]
+  
+              }
+  
+            }
+  
+          },
+  
+          {
+  
+            "name": "Collect Payment",
+  
+            "request": {
+  
+              "method": "POST",
+  
+              "header": [
+  
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                }
+  
+              ],
+  
+              "url": {
+  
+                "raw": "{{base_url}}/fees/payment",
+  
+                "host": [
+                  "{{base_url}}"
+                ],
+  
+                "path": [
+                  "fees",
+                  "payment"
+                ]
+  
+              }
+  
+            }
+  
+          }
+  
+        ]
+  
+      },
+      {
+        "name": "Accounts",
+  
+        "item": [
+  
+          {
+            "name": "Income List",
+  
+            "request": {
+  
+              "method": "GET",
+  
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                }
+              ],
+  
+              "url": {
+                "raw": "{{base_url}}/accounts/income",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "accounts",
+                  "income"
+                ]
+              }
+  
+            }
+  
+          },
+  
+          {
+  
+            "name": "Expense List",
+  
+            "request": {
+  
+              "method": "GET",
+  
+              "header": [
+                {
+                  "key": "Authorization",
+                  "value": "Bearer {{token}}"
+                }
+              ],
+  
+              "url": {
+                "raw": "{{base_url}}/accounts/expense",
+                "host": [
+                  "{{base_url}}"
+                ],
+                "path": [
+                  "accounts",
+                  "expense"
+                ]
+              }
+  
+            }
+  
+          }
+  
+        ]
+  
+      },
+  
+      {
+  
+        "name": "Communication",
+  
+        "item": [
+  
+          {
+  
+            "name": "Notice List",
+  
+            "request": {
+  
+              "method": "GET",
+  
+              "url": {
+  
+                "raw": "{{base_url}}/notice"
+  
+              }
+  
+            }
+  
+          },
+  
+          {
+  
+            "name": "Send Notice",
+  
+            "request": {
+  
+              "method": "POST",
+  
+              "url": {
+  
+                "raw": "{{base_url}}/notice/send"
+  
+              }
+  
+            }
+  
+          },
+  
+          {
+  
+            "name": "Send SMS",
+  
+            "request": {
+  
+              "method": "POST",
+  
+              "url": {
+  
+                "raw": "{{base_url}}/sms/send"
+  
+              }
+  
+            }
+  
+          }
+  
+        ]
+  
+      },
+  
+      {
+  
+        "name": "Library",
+  
+        "item": [
+  
+          {
+  
+            "name": "Book List",
+  
+            "request": {
+  
+              "method": "GET",
+  
+              "url": {
+  
+                "raw": "{{base_url}}/library/books"
+  
+              }
+  
+            }
+  
+          },
+  
+          {
+  
+            "name": "Issue Book",
+  
+            "request": {
+  
+              "method": "POST",
+  
+              "url": {
+  
+                "raw": "{{base_url}}/library/issue"
+  
+              }
+  
+            }
+  
+          },
+  
+          {
+  
+            "name": "Return Book",
+  
+            "request": {
+  
+              "method": "POST",
+  
+              "url": {
+  
+                "raw": "{{base_url}}/library/return"
+  
+              }
+  
+            }
+  
+          }
+  
+        ]
+  
+      },
+  
+      {
+  
+        "name": "Inventory",
+  
+        "item": [
+  
+          {
+  
+            "name": "Item List",
+  
+            "request": {
+  
+              "method": "GET",
+  
+              "url": {
+  
+                "raw": "{{base_url}}/inventory/items"
+  
+              }
+  
+            }
+  
+          },
+  
+          {
+  
+            "name": "Issue Item",
+  
+            "request": {
+  
+              "method": "POST",
+  
+              "url": {
+  
+                "raw": "{{base_url}}/inventory/issue"
+  
+              }
+  
+            }
+  
+          }
+  
+        ]
+  
+      },
+  
+      {
+  
+        "name": "Transport",
+  
+        "item": [
+  
+          {
+  
+            "name": "Route List",
+  
+            "request": {
+  
+              "method": "GET",
+  
+              "url": {
+  
+                "raw": "{{base_url}}/transport/routes"
+  
+              }
+  
+            }
+  
+          },
+  
+          {
+  
+            "name": "Assign Route",
+  
+            "request": {
+  
+              "method": "POST",
+  
+              "url": {
+  
+                "raw": "{{base_url}}/transport/assign"
+  
+              }
+  
+            }
+  
+          }
+  
+        ]
+  
+      },
+  
+      {
+  
+        "name": "Reports",
+  
+        "item": [
+  
+          {
+  
+            "name": "Student Report",
+  
+            "request": {
+  
+              "method": "GET",
+  
+              "url": {
+  
+                "raw": "{{base_url}}/reports/student"
+  
+              }
+  
+            }
+  
+          },
+  
+          {
+  
+            "name": "Attendance Report",
+  
+            "request": {
+  
+              "method": "GET",
+  
+              "url": {
+  
+                "raw": "{{base_url}}/reports/attendance"
+  
+              }
+  
+            }
+  
+          },
+  
+          {
+  
+            "name": "Exam Report",
+  
+            "request": {
+  
+              "method": "GET",
+  
+              "url": {
+  
+                "raw": "{{base_url}}/reports/exam"
+  
+              }
+  
+            }
+  
+          },
+  
+          {
+  
+            "name": "Finance Report",
+  
+            "request": {
+  
+              "method": "GET",
+  
+              "url": {
+  
+                "raw": "{{base_url}}/reports/finance"
+  
+              }
+  
+            }
+  
+          }
+  
+        ]
+  
+      }
+  
+    ]
+  
+  }
