@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2026-07-31T23:23:36 BDT" name="School Management Automation Suite" finished-at="2026-07-31T23:24:02 BDT" duration-ms="25474">
+    <groups>
+    </groups>
+    <test started-at="2026-07-31T23:23:36 BDT" name="Login Module" finished-at="2026-07-31T23:24:02 BDT" duration-ms="25474">
+      <class name="tests.LoginTest">
+        <test-method is-config="true" signature="startBrowser()[pri:0, instance:tests.LoginTest@37afeb11]" started-at="2026-07-31T23:23:36 BDT" name="startBrowser" finished-at="2026-07-31T23:23:48 BDT" duration-ms="11942" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- startBrowser -->
+        <test-method signature="validAdminLogin()[pri:0, instance:tests.LoginTest@37afeb11]" started-at="2026-07-31T23:23:48 BDT" name="validAdminLogin" finished-at="2026-07-31T23:24:01 BDT" duration-ms="12935" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validAdminLogin -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.LoginTest@37afeb11]" started-at="2026-07-31T23:24:01 BDT" name="closeBrowser" finished-at="2026-07-31T23:24:02 BDT" duration-ms="540" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- tests.LoginTest -->
+    </test> <!-- Login Module -->
+  </suite> <!-- School Management Automation Suite -->
+</testng-results>
