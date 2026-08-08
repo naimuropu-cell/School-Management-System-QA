@@ -1,4 +1,7 @@
+base\BasePage.class
 base\BaseTest.class
-utilities\DriverFactory.class
 pages\LoginPage.class
 utilities\ConfigReader.class
+utilities\WaitHelper.class
+pages\DashboardPage.class
+utilities\DriverFactory.class

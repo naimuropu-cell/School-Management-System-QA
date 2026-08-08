@@ -3,37 +3,44 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-public class LoginPage {
+import base.BasePage;
 
-    WebDriver driver;
+public class LoginPage extends BasePage {
 
     public LoginPage(WebDriver driver) {
-        this.driver = driver;
+
+        super(driver);
+
     }
 
     // Locators
-    By email = By.name("email");
 
-    By password = By.name("password");
+    private By email = By.name("email");
 
-    By loginButton = By.cssSelector("input[type='submit']");
+    private By password = By.name("password");
 
-    By forgotPassword = By.id("forget");
+    private By loginButton = By.cssSelector("input[type='submit']");
+
+    private By forgotPassword = By.id("forget");
 
     // Methods
 
     public void enterEmail(String userEmail) {
-        driver.findElement(email).clear();
-        driver.findElement(email).sendKeys(userEmail);
+
+        type(email, userEmail);
+
     }
 
     public void enterPassword(String userPassword) {
-        driver.findElement(password).clear();
-        driver.findElement(password).sendKeys(userPassword);
+
+        type(password, userPassword);
+
     }
 
     public void clickLogin() {
-        driver.findElement(loginButton).click();
+
+        click(loginButton);
+
     }
 
     public void login(String userEmail, String userPassword) {
@@ -43,6 +50,7 @@ public class LoginPage {
         enterPassword(userPassword);
 
         clickLogin();
+
     }
 
 }

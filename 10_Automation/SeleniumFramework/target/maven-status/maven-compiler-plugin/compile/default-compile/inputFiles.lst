@@ -1,4 +1,7 @@
+D:\School-Management-System-QA\10_Automation\SeleniumFramework\src\main\java\base\BasePage.java
 D:\School-Management-System-QA\10_Automation\SeleniumFramework\src\main\java\base\BaseTest.java
+D:\School-Management-System-QA\10_Automation\SeleniumFramework\src\main\java\pages\DashboardPage.java
 D:\School-Management-System-QA\10_Automation\SeleniumFramework\src\main\java\pages\LoginPage.java
 D:\School-Management-System-QA\10_Automation\SeleniumFramework\src\main\java\utilities\ConfigReader.java
 D:\School-Management-System-QA\10_Automation\SeleniumFramework\src\main\java\utilities\DriverFactory.java
+D:\School-Management-System-QA\10_Automation\SeleniumFramework\src\main\java\utilities\WaitHelper.java
