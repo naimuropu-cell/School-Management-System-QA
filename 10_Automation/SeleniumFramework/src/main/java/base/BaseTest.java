@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import helpers.LoginHelper;
 import pages.DashboardPage;
 import pages.MenuPage;
+import pages.StudentPage;
 import utilities.ConfigReader;
 import utilities.DriverFactory;
 
@@ -18,6 +19,7 @@ public class BaseTest {
     // Common Pages
     protected DashboardPage dashboardPage;
     protected MenuPage menuPage;
+    protected StudentPage studentPage;
 
     public void setUp() {
 
@@ -33,6 +35,7 @@ public class BaseTest {
         // Initialize Common Pages
         dashboardPage = new DashboardPage(driver);
         menuPage = new MenuPage(driver);
+        studentPage = new StudentPage(driver);
     }
 
     public void tearDown() {

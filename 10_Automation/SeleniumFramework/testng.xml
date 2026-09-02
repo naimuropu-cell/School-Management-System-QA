@@ -46,4 +46,14 @@
 
     </test>
 
+    <test name="Student Module">
+
+        <classes>
+
+            <class name="tests.StudentTest"/>
+
+        </classes>
+
+    </test>
+
 </suite>
