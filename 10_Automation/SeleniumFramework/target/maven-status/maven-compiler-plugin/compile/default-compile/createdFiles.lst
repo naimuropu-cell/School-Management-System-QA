@@ -5,3 +5,6 @@ utilities\ConfigReader.class
 utilities\WaitHelper.class
 pages\DashboardPage.class
 utilities\DriverFactory.class
+pages\MenuPage.class
+utilities\ScreenshotUtil.class
+helpers\LoginHelper.class

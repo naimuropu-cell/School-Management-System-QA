@@ -1,44 +1,43 @@
 package pages;
 
+import base.BasePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
-import base.BasePage;
+import utilities.ConfigReader;
 
 public class MenuPage extends BasePage {
+
+    private final String baseUrl = ConfigReader.getProperty("baseUrl");
 
     public MenuPage(WebDriver driver) {
         super(driver);
     }
 
-    private By studentsMenu = By.linkText("Students");
-    private By teachersMenu = By.linkText("Teachers");
-    private By academicsMenu = By.linkText("Academics");
-    private By accountsMenu = By.linkText("Accounts");
-    private By examinationMenu = By.linkText("Examination");
-    private By settingsMenu = By.linkText("Settings");
+    private By dashboardMenu = By.cssSelector("a[href*='/dashboard']");
+
+    public void goToDashboard() {
+        click(dashboardMenu);
+    }
+
+    // Verified navigation destinations.
+    // Direct-route navigation is used (rather than expanding sidebar dropdowns)
+    // because these routes are confirmed stable and title-verifiable in the
+    // current application.
 
     public void goToStudents() {
-        click(studentsMenu);
+        driver.get(baseUrl + "/student-list");
     }
 
-    public void goToTeachers() {
-        click(teachersMenu);
+    public void goToClasses() {
+        driver.get(baseUrl + "/class");
     }
 
-    public void goToAcademics() {
-        click(academicsMenu);
+    public void goToSections() {
+        driver.get(baseUrl + "/section");
     }
 
-    public void goToAccounts() {
-        click(accountsMenu);
+    public void goToHomeworks() {
+        driver.get(baseUrl + "/add-homeworks");
     }
 
-    public void goToExamination() {
-        click(examinationMenu);
-    }
-
-    public void goToSettings() {
-        click(settingsMenu);
-    }
 }

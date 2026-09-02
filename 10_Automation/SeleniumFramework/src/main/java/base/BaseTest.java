@@ -40,4 +40,25 @@ public class BaseTest {
         DriverFactory.quitDriver();
 
     }
+
+    // Reusable role-based login methods (delegate to LoginHelper).
+    // Future tests can call loginAsAdmin()/loginAsTeacher()/loginAsStudent()
+    // or loginAsAccountant() directly with no extra setup.
+
+    protected void loginAsAdmin() {
+        loginHelper.loginAsAdmin();
+    }
+
+    protected void loginAsTeacher() {
+        loginHelper.loginAsTeacher();
+    }
+
+    protected void loginAsStudent() {
+        loginHelper.loginAsStudent();
+    }
+
+    protected void loginAsAccountant() {
+        loginHelper.loginAsAccountant();
+    }
+
 }

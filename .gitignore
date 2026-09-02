@@ -1,0 +1,15 @@
+# Maven build output
+target/
+
+# Test reports and screenshots
+reports/
+screenshots/
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db

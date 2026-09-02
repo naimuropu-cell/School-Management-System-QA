@@ -6,11 +6,41 @@
        verbose="1"
        parallel="false">
 
+    <listeners>
+        <listener class-name="listeners.TestListener"/>
+    </listeners>
+
+    <!--
+        TestNG groups: smoke / sanity / regression are declared via
+        @Test(groups = "...") on individual test methods. Groups can be
+        selected at runtime with: mvn test -Dgroups=smoke
+    -->
     <test name="Login Module">
 
         <classes>
 
             <class name="tests.LoginTest"/>
+            <class name="tests.RoleLoginTest"/>
+
+        </classes>
+
+    </test>
+
+    <test name="Dashboard Module">
+
+        <classes>
+
+            <class name="tests.DashboardTest"/>
+
+        </classes>
+
+    </test>
+
+    <test name="Navigation Module">
+
+        <classes>
+
+            <class name="tests.NavigationTest"/>
 
         </classes>
 

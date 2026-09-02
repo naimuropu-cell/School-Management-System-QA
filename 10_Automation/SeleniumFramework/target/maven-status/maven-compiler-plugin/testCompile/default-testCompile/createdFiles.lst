@@ -1,1 +1,5 @@
+tests\NavigationTest.class
+tests\DashboardTest.class
 tests\LoginTest.class
+tests\RoleLoginTest.class
+listeners\TestListener.class

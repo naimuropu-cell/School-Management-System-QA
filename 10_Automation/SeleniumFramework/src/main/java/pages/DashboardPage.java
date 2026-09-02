@@ -1,21 +1,27 @@
 package pages;
 
+import base.BasePage;
 import org.openqa.selenium.WebDriver;
 
-public class DashboardPage {
+public class DashboardPage extends BasePage {
 
-    WebDriver driver;
+    private static final String ADMIN_DASHBOARD_ROUTE = "/admin-dashboard";
+    private static final String STUDENT_DASHBOARD_ROUTE = "/student-dashboard";
 
     public DashboardPage(WebDriver driver) {
-        this.driver = driver;
+        super(driver);
+    }
+
+    public boolean isAdminDashboardDisplayed() {
+        return getCurrentUrl().contains(ADMIN_DASHBOARD_ROUTE);
+    }
+
+    public boolean isStudentDashboardDisplayed() {
+        return getCurrentUrl().contains(STUDENT_DASHBOARD_ROUTE);
     }
 
     public boolean isDashboardDisplayed() {
-
-        String currentUrl = driver.getCurrentUrl();
-
-        return currentUrl.contains("/admin-dashboard");
-
+        return isAdminDashboardDisplayed() || isStudentDashboardDisplayed();
     }
 
 }

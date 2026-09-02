@@ -21,8 +21,6 @@ public class DriverFactory {
 
                 driver = new ChromeDriver();
 
-                driver.manage().window().maximize();
-
             } else {
 
                 throw new RuntimeException("Browser not supported: " + browser);

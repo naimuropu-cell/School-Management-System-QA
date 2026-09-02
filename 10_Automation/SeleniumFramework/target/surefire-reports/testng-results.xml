@@ -2,24 +2,23 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-08-01T02:14:50 BDT" name="School Management Automation Suite" finished-at="2026-08-01T02:15:05 BDT" duration-ms="15021">
+  <suite started-at="2026-08-29T23:50:32 BDT" name="Surefire suite" finished-at="2026-08-29T23:51:14 BDT" duration-ms="42386">
     <groups>
+      <group name="inspect">
+        <method signature="DomInspect.inspectStudentList()[pri:0, instance:tests.DomInspect@48ae9b55]" name="inspectStudentList" class="tests.DomInspect"/>
+      </group> <!-- inspect -->
     </groups>
-    <test started-at="2026-08-01T02:14:50 BDT" name="Login Module" finished-at="2026-08-01T02:15:05 BDT" duration-ms="15021">
-      <class name="tests.LoginTest">
-        <test-method is-config="true" signature="startBrowser()[pri:0, instance:tests.LoginTest@37afeb11]" started-at="2026-08-01T02:14:50 BDT" name="startBrowser" finished-at="2026-08-01T02:14:58 BDT" duration-ms="7300" status="PASS">
+    <test started-at="2026-08-29T23:50:32 BDT" name="Surefire test" finished-at="2026-08-29T23:51:14 BDT" duration-ms="42386">
+      <class name="tests.DomInspect">
+        <test-method is-config="true" signature="st()[pri:0, instance:tests.DomInspect@48ae9b55]" started-at="2026-08-29T23:50:32 BDT" name="st" finished-at="2026-08-29T23:50:41 BDT" duration-ms="8801" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- startBrowser -->
-        <test-method signature="validAdminLogin()[pri:0, instance:tests.LoginTest@37afeb11]" started-at="2026-08-01T02:14:58 BDT" name="validAdminLogin" finished-at="2026-08-01T02:15:05 BDT" duration-ms="7110" status="PASS">
+        </test-method> <!-- st -->
+        <test-method signature="inspectStudentList()[pri:0, instance:tests.DomInspect@48ae9b55]" started-at="2026-08-29T23:50:41 BDT" name="inspectStudentList" finished-at="2026-08-29T23:51:14 BDT" duration-ms="33489" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validAdminLogin -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:tests.LoginTest@37afeb11]" started-at="2026-08-01T02:15:05 BDT" name="closeBrowser" finished-at="2026-08-01T02:15:05 BDT" duration-ms="537" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- closeBrowser -->
-      </class> <!-- tests.LoginTest -->
-    </test> <!-- Login Module -->
-  </suite> <!-- School Management Automation Suite -->
+        </test-method> <!-- inspectStudentList -->
+      </class> <!-- tests.DomInspect -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
 </testng-results>
