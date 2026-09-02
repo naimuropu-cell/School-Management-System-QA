@@ -22,6 +22,7 @@ Automate critical smoke and regression test cases using Selenium WebDriver to va
 - Student List page elements (search, table, pagination, add button)
 - Academics Class & Section pages (navigation, search, table, add button)
 - Fees module pages (Fee Structure, Fee Collection, Fee Assignment, Fee Report)
+- Attendance module pages (Attendance List, Attendance Report)
 
 ### Out of Scope
 
@@ -81,6 +82,7 @@ Automate critical smoke and regression test cases using Selenium WebDriver to va
 | StudentTest | navigateToStudentList, studentListSearchBoxDisplayed, studentListTableDisplayed, studentListAddButtonDisplayed, studentSearchByName | TS-STU-016, TS-STU-017, TS-STU-019, TS-STU-054, TS-STU-063 |
 | AcademicsTest | navigateToClassList, classListSearchBoxDisplayed, classListTableDisplayed, classListAddButtonDisplayed, navigateToSectionList, sectionListTableDisplayed, classSearch | TS-ACA-011, TS-ACA-012, TS-ACA-016, TS-ACA-017, TS-ACA-049 |
 | FeesTest | navigateToFeeStructure, feeStructureSearchBoxDisplayed, feeStructureTableDisplayed, feeStructureAddButtonDisplayed, navigateToFeeCollection, navigateToFeeAssignment, navigateToFeeReport, feeStructureSearch | TS-FEE-003, TS-FEE-004, TS-FEE-005, TS-FEE-006, TS-FEE-007, TS-FEE-061 |
+| AttendanceTest | navigateToAttendance, attendanceSearchBoxDisplayed, attendanceTableDisplayed, attendancePaginationDisplayed, attendanceAddButtonDisplayed, navigateToAttendanceReport, attendanceReportTableDisplayed, attendanceSearch | TS-ATT-001, TS-ATT-005, TS-ATT-030, TS-ATT-031, TS-ATT-034, TS-ATT-035, TS-ATT-036 |
 
 ---
 

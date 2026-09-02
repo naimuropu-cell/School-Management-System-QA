@@ -66,6 +66,16 @@
 
     </test>
 
+    <test name="Attendance Module">
+
+        <classes>
+
+            <class name="tests.AttendanceTest"/>
+
+        </classes>
+
+    </test>
+
     <test name="Fees Module">
 
         <classes>

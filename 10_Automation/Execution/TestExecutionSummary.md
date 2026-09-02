@@ -19,12 +19,12 @@
 
 | Metric | Count |
 |---------|------:|
-| Total Test Methods | 33 |
-| Smoke | 26 |
-| Regression | 4 |
+| Total Test Methods | 41 |
+| Smoke | 33 |
+| Regression | 5 |
 | Default | 1 |
-| Total Test Classes | 7 |
-| Registered in Suite | 7 |
+| Total Test Classes | 8 |
+| Registered in Suite | 8 |
 
 ---
 
@@ -38,6 +38,7 @@
 | Navigation | NavigationTest | 4 | smoke | Passed |
 | Student | StudentTest | 5 | smoke, regression | Passed |
 | Academics | AcademicsTest | 7 | smoke, regression | Passed |
+| Attendance | AttendanceTest | 8 | smoke, regression | Passed |
 | Fees | FeesTest | 8 | smoke, regression | Passed |
 
 ---
@@ -52,6 +53,7 @@
 | Phase 4 | Student Module (List page) | 5 | Passed |
 | Phase 5 | Academics (Class & Section) | 7 | Passed |
 | Phase 6 | Fees / Finance | 8 | Passed |
+| Phase 7 | Attendance (List & Report) | 8 | Passed |
 
 ---
 
