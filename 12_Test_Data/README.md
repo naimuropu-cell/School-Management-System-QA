@@ -4,6 +4,19 @@ Test data strategy and sample data used across QA activities.
 
 ---
 
+## Files
+
+| File | Purpose |
+|------|---------|
+| `01_Students.md` | Sample student records + boundary & data-quality cases |
+| `02_Attendance.md` | Sample attendance marks + date/duplicate rules |
+| `03_Fees.md` | Fee structures, assignments, collections, defaulters |
+| `04_Inventory.md` | Categories, items, stock levels, receive/issue records |
+| `security_payloads.md` | SQL injection, XSS and malformed input payloads |
+| `boundary_values.md` | Length, numeric, date and special-character boundaries |
+
+---
+
 ## Strategy
 
 - **Login credentials** are stored in `config.properties` and managed per role
