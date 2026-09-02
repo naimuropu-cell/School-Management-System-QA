@@ -10,6 +10,9 @@ screenshots/
 *.iml
 .vscode/
 
+# OpenCode local plans
+.opencode/
+
 # OS
 .DS_Store
 Thumbs.db
