@@ -211,7 +211,7 @@ Coverage:
 
 # 🤖 Automation
 
-Automation Framework (Planned):
+Automation Framework (Completed):
 
 - Selenium WebDriver
 - Java
@@ -219,15 +219,16 @@ Automation Framework (Planned):
 - Maven
 - Page Object Model (POM)
 
-Automation Scope:
+Automation Scope (8 modules, 9 test classes, 49 test methods across 8 phases):
 
-- Login
-- Student Admission
-- Homework
-- Fees
-- Examination
-- Leave
-- Reports
+- Login (5)
+- Dashboard & Role-based Login (8)
+- Navigation (4)
+- Student (5)
+- Academics — Class & Section (7)
+- Attendance (8)
+- Fees (8)
+- Inventory (8)
 
 ---
 
@@ -240,6 +241,11 @@ Database validation includes:
 - CRUD Validation
 - Data Integrity
 - Foreign Key Validation
+
+Data layer artifacts:
+
+- `11_SQL/` — core validation queries (`schema.sql`, `01_Students.sql` … `05_Inventory.sql`)
+- `12_Test_Data/` — reference datasets (`01_Students.md` … `04_Inventory.md`, `security_payloads.md`, `boundary_values.md`)
 
 ---
 
@@ -281,7 +287,7 @@ Includes:
 | Test Scenarios | ✅ Completed |
 | Test Cases | ✅ Completed |
 | API Testing | ✅ Completed  |
-| Automation | 🔄 In Progress |
+| Automation | ✅ Completed |
 
 ---
 
@@ -299,7 +305,7 @@ This repository is created for learning, portfolio, and software quality assuran
 
 ## ⭐ Author
 
-**Naimur Rahman**
+**Md Naimur Rahman**
 
 Software QA Engineer
 
