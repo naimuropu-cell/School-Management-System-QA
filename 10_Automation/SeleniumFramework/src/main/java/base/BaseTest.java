@@ -7,6 +7,7 @@ import pages.AcademicsPage;
 import pages.AttendancePage;
 import pages.DashboardPage;
 import pages.FeePage;
+import pages.InventoryPage;
 import pages.MenuPage;
 import pages.StudentPage;
 import utilities.ConfigReader;
@@ -26,6 +27,7 @@ public class BaseTest {
     protected AcademicsPage academicsPage;
     protected AttendancePage attendancePage;
     protected FeePage feePage;
+    protected InventoryPage inventoryPage;
 
     public void setUp() {
 
@@ -45,6 +47,7 @@ public class BaseTest {
         academicsPage = new AcademicsPage(driver);
         attendancePage = new AttendancePage(driver);
         feePage = new FeePage(driver);
+        inventoryPage = new InventoryPage(driver);
     }
 
     public void tearDown() {

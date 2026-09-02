@@ -4,49 +4,26 @@ SQL queries used for database validation during QA testing.
 
 ---
 
-## Sample Queries
+## Files
 
-### Verify Student Count
-
-```sql
-SELECT COUNT(*) AS total_students
-FROM students
-WHERE status = 'active';
-```
-
-### Verify Duplicate Admission Number
-
-```sql
-SELECT admission_no, COUNT(*) AS cnt
-FROM students
-GROUP BY admission_no
-HAVING COUNT(*) > 1;
-```
-
-### Verify Student Fee Assignment
-
-```sql
-SELECT s.id, s.student_name, fs.fee_type, fs.amount
-FROM students s
-JOIN student_fees sf ON s.id = sf.student_id
-JOIN fee_structures fs ON sf.fee_id = fs.id
-WHERE s.status = 'active';
-```
-
-### Verify Attendance Records
-
-```sql
-SELECT student_id, DATE(attendance_date) AS date, status
-FROM attendances
-WHERE attendance_date >= CURDATE() - INTERVAL 7 DAY
-ORDER BY attendance_date DESC;
-```
+| File | Module | Validates |
+|------|--------|-----------|
+| `schema.sql` | Reference | Core tables & columns used by all queries |
+| `01_Students.sql` | Student | Counts, duplicates, class/section grouping |
+| `03_Attendance.sql` | Attendance | Records, attendance %, duplicate/missing dates |
+| `04_Fees.sql` | Fees | Structures, assignments, collections, defaulters |
+| `05_Inventory.sql` | Inventory | Items, stock levels, low stock, issue/receive |
 
 ---
 
 ## Usage
 
-These queries are executed against the QA MySQL database to validate data integrity after CRUD operations and cross-check application behavior.
+Each file is a self-contained set of `--`-annotated queries executed against the
+QA MySQL database to validate data integrity after CRUD operations and
+cross-check the behavior asserted by the Selenium automation suite.
+
+Run files together or one query at a time; adapt table/column names to the
+actual QA database if they differ from `schema.sql`.
 
 ---
 

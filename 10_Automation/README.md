@@ -27,11 +27,11 @@ SeleniumFramework/
 ├── src/main/java/
 │   ├── base/          BasePage, BaseTest
 │   ├── helpers/       LoginHelper
-│   ├── pages/         LoginPage, DashboardPage, MenuPage, StudentPage, AcademicsPage, AttendancePage, FeePage
+│   ├── pages/         LoginPage, DashboardPage, MenuPage, StudentPage, AcademicsPage, AttendancePage, FeePage, InventoryPage
 │   └── utilities/     ConfigReader, DriverFactory, WaitHelper, ScreenshotUtil
 ├── src/test/java/
 │   ├── listeners/     TestListener
-│   └── tests/         LoginTest, RoleLoginTest, DashboardTest, NavigationTest, StudentTest, AcademicsTest, AttendanceTest, FeesTest
+│   └── tests/         LoginTest, RoleLoginTest, DashboardTest, NavigationTest, StudentTest, AcademicsTest, AttendanceTest, FeesTest, InventoryTest
 ├── src/main/resources/
 │   └── config.properties
 └── testng.xml
@@ -51,8 +51,9 @@ SeleniumFramework/
 | Academics | AcademicsTest | 7 | smoke, regression |
 | Attendance | AttendanceTest | 8 | smoke, regression |
 | Fees | FeesTest | 8 | smoke, regression |
+| Inventory | InventoryTest | 8 | smoke, regression |
 
-**Total:** 41 test methods across 8 test classes.
+**Total:** 49 test methods across 9 test classes.
 
 ---
 
@@ -81,8 +82,8 @@ mvn test -Dgroups=smoke,regression
 
 | Group | Purpose | Test Count |
 |-------|---------|------------|
-| smoke | Core navigation and visibility checks | 33 |
-| regression | Deeper validation | 5 |
+| smoke | Core navigation and visibility checks | 41 |
+| regression | Deeper validation | 6 |
 | (default) | Unclassified tests | 1 |
 
 ---
@@ -110,6 +111,7 @@ All credentials and URLs are stored in `src/main/resources/config.properties`. T
 | Phase 5 | Academics (Class & Section) | Completed |
 | Phase 6 | Fees / Finance | Completed |
 | Phase 7 | Attendance | Completed |
+| Phase 8 | Inventory | Completed |
 
 ---
 

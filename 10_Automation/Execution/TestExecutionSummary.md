@@ -19,12 +19,12 @@
 
 | Metric | Count |
 |---------|------:|
-| Total Test Methods | 41 |
-| Smoke | 33 |
-| Regression | 5 |
+| Total Test Methods | 49 |
+| Smoke | 41 |
+| Regression | 6 |
 | Default | 1 |
-| Total Test Classes | 8 |
-| Registered in Suite | 8 |
+| Total Test Classes | 9 |
+| Registered in Suite | 9 |
 
 ---
 
@@ -40,6 +40,7 @@
 | Academics | AcademicsTest | 7 | smoke, regression | Passed |
 | Attendance | AttendanceTest | 8 | smoke, regression | Passed |
 | Fees | FeesTest | 8 | smoke, regression | Passed |
+| Inventory | InventoryTest | 8 | smoke, regression | Passed |
 
 ---
 
@@ -54,6 +55,7 @@
 | Phase 5 | Academics (Class & Section) | 7 | Passed |
 | Phase 6 | Fees / Finance | 8 | Passed |
 | Phase 7 | Attendance (List & Report) | 8 | Passed |
+| Phase 8 | Inventory (Items & Issue) | 8 | Passed |
 
 ---
 

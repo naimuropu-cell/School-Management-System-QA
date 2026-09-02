@@ -23,6 +23,7 @@ Automate critical smoke and regression test cases using Selenium WebDriver to va
 - Academics Class & Section pages (navigation, search, table, add button)
 - Fees module pages (Fee Structure, Fee Collection, Fee Assignment, Fee Report)
 - Attendance module pages (Attendance List, Attendance Report)
+- Inventory module pages (Item List, Item Issue)
 
 ### Out of Scope
 
@@ -83,6 +84,7 @@ Automate critical smoke and regression test cases using Selenium WebDriver to va
 | AcademicsTest | navigateToClassList, classListSearchBoxDisplayed, classListTableDisplayed, classListAddButtonDisplayed, navigateToSectionList, sectionListTableDisplayed, classSearch | TS-ACA-011, TS-ACA-012, TS-ACA-016, TS-ACA-017, TS-ACA-049 |
 | FeesTest | navigateToFeeStructure, feeStructureSearchBoxDisplayed, feeStructureTableDisplayed, feeStructureAddButtonDisplayed, navigateToFeeCollection, navigateToFeeAssignment, navigateToFeeReport, feeStructureSearch | TS-FEE-003, TS-FEE-004, TS-FEE-005, TS-FEE-006, TS-FEE-007, TS-FEE-061 |
 | AttendanceTest | navigateToAttendance, attendanceSearchBoxDisplayed, attendanceTableDisplayed, attendancePaginationDisplayed, attendanceAddButtonDisplayed, navigateToAttendanceReport, attendanceReportTableDisplayed, attendanceSearch | TS-ATT-001, TS-ATT-005, TS-ATT-030, TS-ATT-031, TS-ATT-034, TS-ATT-035, TS-ATT-036 |
+| InventoryTest | navigateToItems, inventorySearchBoxDisplayed, inventoryItemsTableDisplayed, inventoryItemsPaginationDisplayed, inventoryItemsAddButtonDisplayed, navigateToItemIssue, itemIssueTableDisplayed, inventorySearch | TS-INV-006, TS-INV-027, TS-INV-043, TS-INV-044, TS-INV-045 |
 
 ---
 

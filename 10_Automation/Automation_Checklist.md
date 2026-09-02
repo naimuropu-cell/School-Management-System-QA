@@ -12,6 +12,7 @@
 | 5 | Academics | AcademicsTest | navigateToClassList, classListSearchBoxDisplayed, classListTableDisplayed, classListAddButtonDisplayed, navigateToSectionList, sectionListTableDisplayed, classSearch | smoke, regression | Completed |
 | 6 | Fees | FeesTest | navigateToFeeStructure, feeStructureSearchBoxDisplayed, feeStructureTableDisplayed, feeStructureAddButtonDisplayed, navigateToFeeCollection, navigateToFeeAssignment, navigateToFeeReport, feeStructureSearch | smoke, regression | Completed |
 | 7 | Attendance | AttendanceTest | navigateToAttendance, attendanceSearchBoxDisplayed, attendanceTableDisplayed, attendancePaginationDisplayed, attendanceAddButtonDisplayed, navigateToAttendanceReport, attendanceReportTableDisplayed, attendanceSearch | smoke, regression | Completed |
+| 8 | Inventory | InventoryTest | navigateToItems, inventorySearchBoxDisplayed, inventoryItemsTableDisplayed, inventoryItemsPaginationDisplayed, inventoryItemsAddButtonDisplayed, navigateToItemIssue, itemIssueTableDisplayed, inventorySearch | smoke, regression | Completed |
 
 ---
 
@@ -19,17 +20,17 @@
 
 | Group | Test Count | Modules |
 |-------|-----------|---------|
-| smoke | 33 | Login, Dashboard, Navigation, Student, Academics, Fees, Attendance |
-| regression | 5 | Login, Student, Academics, Fees, Attendance |
+| smoke | 41 | Login, Dashboard, Navigation, Student, Academics, Fees, Attendance, Inventory |
+| regression | 6 | Login, Student, Academics, Fees, Attendance, Inventory |
 | (default) | 1 | Login |
 
 ---
 
 ## Total
 
-- **8 test classes**
-- **41 test methods**
-- **7 modules automated**
+- **9 test classes**
+- **49 test methods**
+- **8 modules automated**
 
 ---
 
