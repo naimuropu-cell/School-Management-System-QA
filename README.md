@@ -305,7 +305,7 @@ This repository is created for learning, portfolio, and software quality assuran
 
 ## ⭐ Author
 
-**Md Naimur Rahman**
+**Md. Naimur Rahman Apu**
 
 Software QA Engineer
 
