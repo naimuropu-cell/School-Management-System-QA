@@ -19,12 +19,12 @@
 
 | Metric | Count |
 |---------|------:|
-| Total Test Methods | 18 |
-| Smoke | 13 |
-| Regression | 2 |
+| Total Test Methods | 25 |
+| Smoke | 19 |
+| Regression | 3 |
 | Default | 1 |
-| Total Test Classes | 5 |
-| Registered in Suite | 5 |
+| Total Test Classes | 6 |
+| Registered in Suite | 6 |
 
 ---
 
@@ -37,6 +37,7 @@
 | Dashboard | DashboardTest | 4 | smoke | Passed |
 | Navigation | NavigationTest | 4 | smoke | Passed |
 | Student | StudentTest | 5 | smoke, regression | Passed |
+| Academics | AcademicsTest | 7 | smoke, regression | Passed |
 
 ---
 
@@ -48,6 +49,7 @@
 | Phase 2 | Role-based login + Dashboard | 8 | Passed |
 | Phase 3 | Navigation to key pages | 4 | Passed |
 | Phase 4 | Student Module (List page) | 5 | Passed |
+| Phase 5 | Academics (Class & Section) | 7 | Passed |
 
 ---
 

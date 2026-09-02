@@ -20,6 +20,7 @@ Automate critical smoke and regression test cases using Selenium WebDriver to va
 - Dashboard verification per role
 - Navigation to key pages (Student List, Classes, Sections, Homework)
 - Student List page elements (search, table, pagination, add button)
+- Academics Class & Section pages (navigation, search, table, add button)
 
 ### Out of Scope
 
@@ -77,6 +78,7 @@ Automate critical smoke and regression test cases using Selenium WebDriver to va
 | DashboardTest | adminDashboardIsDisplayed, teacherDashboardIsDisplayed, studentDashboardIsDisplayed, accountantDashboardIsDisplayed | — |
 | NavigationTest | navigateToStudentList, navigateToClasses, navigateToSections, navigateToHomeworks | — |
 | StudentTest | navigateToStudentList, studentListSearchBoxDisplayed, studentListTableDisplayed, studentListAddButtonDisplayed, studentSearchByName | TS-STU-016, TS-STU-017, TS-STU-019, TS-STU-054, TS-STU-063 |
+| AcademicsTest | navigateToClassList, classListSearchBoxDisplayed, classListTableDisplayed, classListAddButtonDisplayed, navigateToSectionList, sectionListTableDisplayed, classSearch | TS-ACA-011, TS-ACA-012, TS-ACA-016, TS-ACA-017, TS-ACA-049 |
 
 ---
 

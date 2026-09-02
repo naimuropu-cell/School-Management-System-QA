@@ -3,6 +3,7 @@ package base;
 import org.openqa.selenium.WebDriver;
 
 import helpers.LoginHelper;
+import pages.AcademicsPage;
 import pages.DashboardPage;
 import pages.MenuPage;
 import pages.StudentPage;
@@ -20,6 +21,7 @@ public class BaseTest {
     protected DashboardPage dashboardPage;
     protected MenuPage menuPage;
     protected StudentPage studentPage;
+    protected AcademicsPage academicsPage;
 
     public void setUp() {
 
@@ -36,6 +38,7 @@ public class BaseTest {
         dashboardPage = new DashboardPage(driver);
         menuPage = new MenuPage(driver);
         studentPage = new StudentPage(driver);
+        academicsPage = new AcademicsPage(driver);
     }
 
     public void tearDown() {

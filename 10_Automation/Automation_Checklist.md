@@ -9,6 +9,7 @@
 | 2 | Dashboard | DashboardTest | adminDashboardIsDisplayed, teacherDashboardIsDisplayed, studentDashboardIsDisplayed, accountantDashboardIsDisplayed | smoke | Completed |
 | 3 | Navigation | NavigationTest | navigateToStudentList, navigateToClasses, navigateToSections, navigateToHomeworks | smoke | Completed |
 | 4 | Student | StudentTest | navigateToStudentList, studentListSearchBoxDisplayed, studentListTableDisplayed, studentListAddButtonDisplayed, studentSearchByName | smoke, regression | Completed |
+| 5 | Academics | AcademicsTest | navigateToClassList, classListSearchBoxDisplayed, classListTableDisplayed, classListAddButtonDisplayed, navigateToSectionList, sectionListTableDisplayed, classSearch | smoke, regression | Completed |
 
 ---
 
@@ -16,17 +17,17 @@
 
 | Group | Test Count | Modules |
 |-------|-----------|---------|
-| smoke | 13 | Login, Dashboard, Navigation, Student |
-| regression | 2 | Login, Student |
+| smoke | 19 | Login, Dashboard, Navigation, Student, Academics |
+| regression | 3 | Login, Student, Academics |
 | (default) | 1 | Login |
 
 ---
 
 ## Total
 
-- **5 test classes**
-- **18 test methods**
-- **4 modules automated**
+- **6 test classes**
+- **25 test methods**
+- **5 modules automated**
 
 ---
 

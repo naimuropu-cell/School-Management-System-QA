@@ -56,4 +56,14 @@
 
     </test>
 
+    <test name="Academics Module">
+
+        <classes>
+
+            <class name="tests.AcademicsTest"/>
+
+        </classes>
+
+    </test>
+
 </suite>
