@@ -5,6 +5,7 @@ import org.openqa.selenium.WebDriver;
 import helpers.LoginHelper;
 import pages.AcademicsPage;
 import pages.DashboardPage;
+import pages.FeePage;
 import pages.MenuPage;
 import pages.StudentPage;
 import utilities.ConfigReader;
@@ -22,6 +23,7 @@ public class BaseTest {
     protected MenuPage menuPage;
     protected StudentPage studentPage;
     protected AcademicsPage academicsPage;
+    protected FeePage feePage;
 
     public void setUp() {
 
@@ -39,6 +41,7 @@ public class BaseTest {
         menuPage = new MenuPage(driver);
         studentPage = new StudentPage(driver);
         academicsPage = new AcademicsPage(driver);
+        feePage = new FeePage(driver);
     }
 
     public void tearDown() {

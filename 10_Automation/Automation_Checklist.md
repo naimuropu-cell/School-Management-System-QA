@@ -10,6 +10,7 @@
 | 3 | Navigation | NavigationTest | navigateToStudentList, navigateToClasses, navigateToSections, navigateToHomeworks | smoke | Completed |
 | 4 | Student | StudentTest | navigateToStudentList, studentListSearchBoxDisplayed, studentListTableDisplayed, studentListAddButtonDisplayed, studentSearchByName | smoke, regression | Completed |
 | 5 | Academics | AcademicsTest | navigateToClassList, classListSearchBoxDisplayed, classListTableDisplayed, classListAddButtonDisplayed, navigateToSectionList, sectionListTableDisplayed, classSearch | smoke, regression | Completed |
+| 6 | Fees | FeesTest | navigateToFeeStructure, feeStructureSearchBoxDisplayed, feeStructureTableDisplayed, feeStructureAddButtonDisplayed, navigateToFeeCollection, navigateToFeeAssignment, navigateToFeeReport, feeStructureSearch | smoke, regression | Completed |
 
 ---
 
@@ -17,17 +18,17 @@
 
 | Group | Test Count | Modules |
 |-------|-----------|---------|
-| smoke | 19 | Login, Dashboard, Navigation, Student, Academics |
-| regression | 3 | Login, Student, Academics |
+| smoke | 26 | Login, Dashboard, Navigation, Student, Academics, Fees |
+| regression | 4 | Login, Student, Academics, Fees |
 | (default) | 1 | Login |
 
 ---
 
 ## Total
 
-- **6 test classes**
-- **25 test methods**
-- **5 modules automated**
+- **7 test classes**
+- **33 test methods**
+- **6 modules automated**
 
 ---
 

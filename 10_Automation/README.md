@@ -27,11 +27,11 @@ SeleniumFramework/
 ├── src/main/java/
 │   ├── base/          BasePage, BaseTest
 │   ├── helpers/       LoginHelper
-│   ├── pages/         LoginPage, DashboardPage, MenuPage, StudentPage, AcademicsPage
+│   ├── pages/         LoginPage, DashboardPage, MenuPage, StudentPage, AcademicsPage, FeePage
 │   └── utilities/     ConfigReader, DriverFactory, WaitHelper, ScreenshotUtil
 ├── src/test/java/
 │   ├── listeners/     TestListener
-│   └── tests/         LoginTest, RoleLoginTest, DashboardTest, NavigationTest, StudentTest, AcademicsTest
+│   └── tests/         LoginTest, RoleLoginTest, DashboardTest, NavigationTest, StudentTest, AcademicsTest, FeesTest
 ├── src/main/resources/
 │   └── config.properties
 └── testng.xml
@@ -49,8 +49,9 @@ SeleniumFramework/
 | Navigation | NavigationTest | 4 | smoke |
 | Student | StudentTest | 5 | smoke, regression |
 | Academics | AcademicsTest | 7 | smoke, regression |
+| Fees | FeesTest | 8 | smoke, regression |
 
-**Total:** 25 test methods across 6 test classes.
+**Total:** 33 test methods across 7 test classes.
 
 ---
 
@@ -79,8 +80,8 @@ mvn test -Dgroups=smoke,regression
 
 | Group | Purpose | Test Count |
 |-------|---------|------------|
-| smoke | Core navigation and visibility checks | 19 |
-| regression | Deeper validation | 3 |
+| smoke | Core navigation and visibility checks | 26 |
+| regression | Deeper validation | 4 |
 | (default) | Unclassified tests | 1 |
 
 ---
@@ -106,6 +107,7 @@ All credentials and URLs are stored in `src/main/resources/config.properties`. T
 | Phase 3 | Navigation to key pages | Completed |
 | Phase 4 | Student Module | Completed |
 | Phase 5 | Academics (Class & Section) | Completed |
+| Phase 6 | Fees / Finance | Completed |
 
 ---
 

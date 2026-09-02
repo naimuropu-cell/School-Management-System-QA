@@ -66,4 +66,14 @@
 
     </test>
 
+    <test name="Fees Module">
+
+        <classes>
+
+            <class name="tests.FeesTest"/>
+
+        </classes>
+
+    </test>
+
 </suite>
